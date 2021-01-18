@@ -1,8 +1,9 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in splittable.gemspec
+source 'https://rubygems.org'
+
 gemspec
 
-gem "rake", "~> 13.0.3"
-gem "rspec", "~> 3.10"
 gem 'pry-byebug', '~> 3.9'
+gem 'rake', '~> 13.0.3'
+gem 'rspec', '~> 3.10'

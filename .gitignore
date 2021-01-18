@@ -1,4 +1,7 @@
-/.bundle/
+# Ignore bundler config.
+/.bundle
+/vendor/bundle
+
 /.yardoc
 /_yardoc/
 /coverage/
@@ -9,3 +12,6 @@
 
 # rspec failure tracking
 .rspec_status
+
+# rspec
+/spec/examples.txt
