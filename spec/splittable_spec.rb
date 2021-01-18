@@ -43,7 +43,8 @@ RSpec.describe Splittable do
       { value: 1000,    installments: [35.98, 964.01],           result: [35.99, 964.01] },
       { value: 100,     installments: [33.33, 33.333, 33.33333], result: [33.34, 33.33, 33.33] },
       { value: 100.003, installments: [33.33, 33.333, 33.33333], result: [33.34, 33.33, 33.33] },
-      { value: 1170,    installments: [235.224, 235.224, 229.11000000000027, 235.21999999999974, 235.224], result: [235.23, 235.22, 229.11, 235.22, 235.22] },
+      { value: 1170,    installments: [235.224, 235.224, 229.11000000000027, 235.21999999999974, 235.224],
+        result: [235.23, 235.22, 229.11, 235.22, 235.22] }
     ].each do |example|
       it "installments like #{example[:installments]} should be normalized to #{example[:result]}" do
         normalized = described_class.normalize(value: example[:value], installments: example[:installments])
