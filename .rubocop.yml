@@ -12,6 +12,9 @@ AllCops:
     - 'vendor/**/*'
   UseCache: false
 
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
 Layout/DotPosition:
   EnforcedStyle: trailing
 
