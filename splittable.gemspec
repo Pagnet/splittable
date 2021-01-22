@@ -8,6 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Arthur Brandão', 'Marcelo Toledo']
   spec.email         = ['arthur_aebc@hotmail.com', 'marcelotoledo5000@gmail.com']
 
+  spec.license       = 'MIT'
+
   spec.summary       = 'Calculate division and normalize parcels.'
   spec.description   = 'Calculate division and normalize parcels to use just cents.'
   spec.homepage      = 'https://github.com/Pagnet/splittable'
