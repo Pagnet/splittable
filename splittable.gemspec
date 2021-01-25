@@ -10,8 +10,11 @@ Gem::Specification.new do |spec|
 
   spec.license       = 'MIT'
 
-  spec.summary       = 'Calculate division and normalize parcels.'
-  spec.description   = 'Calculate division and normalize parcels to use just cents.'
+  spec.summary       = 'Calculate division and normalize parcels to use just cents.'
+  spec.description   = 'This gem solves the problem of several decimal places in divisions
+                        where the result must be presented in cents, that is converting the
+                        division result to only two decimal places and the difference is
+                        attributed to the first plot.'
   spec.homepage      = 'https://github.com/Pagnet/splittable'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.5.3')
 
