@@ -10,10 +10,11 @@
 /spec/reports/
 /tmp/
 
-# rspec failure tracking
-.rspec_status
+# local gem
+splittable*.gem
 
 # rspec
+.rspec_status
 /spec/examples.txt
 
 .tool-versions
