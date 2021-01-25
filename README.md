@@ -1,5 +1,7 @@
 # Splittable
 
+[![Gem Version](https://badge.fury.io/rb/splittable.svg)](https://badge.fury.io/rb/splittable)
+
 ## Goal
 
 This gem solves the problem of several decimal places in divisions where the result must be presented in cents, that is converting the division result to only two decimal places and the difference is attributed to the first plot.
