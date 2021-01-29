@@ -1,6 +1,7 @@
 # Splittable
 
 [![Gem Version](https://badge.fury.io/rb/splittable.svg)](https://badge.fury.io/rb/splittable)
+[![Ruby](https://github.com/Pagnet/splittable/workflows/Ruby/badge.svg?branch=master)](https://github.com/Pagnet/splittable/actions?query=workflow%3ARuby)
 
 ## Goal
 
