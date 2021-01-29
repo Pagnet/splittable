@@ -2,7 +2,7 @@
 
 class Splittable::Normalize
   def initialize(value:, installments:)
-    @value = BigDecimal(value.truncate(2), 15)
+    @value = BigDecimal(value, 15).truncate(2)
     @installments = installments.map { |installment| BigDecimal(installment.round(2), 15) }
   end
 
