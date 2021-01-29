@@ -19,7 +19,7 @@ RSpec.describe Splittable do
       { input: [294.03, 6],  result: [49.03, 49, 49, 49, 49, 49], result_sum: 294.03 }
     ].each do |example|
       context "when input is #{example[:input]}" do
-        let(:value) { example[:input].first.to_d }
+        let(:value) { example[:input].first }
         let(:quantity) { example[:input].last }
         let(:expected_result) { example[:result].map { |r| BigDecimal(r, 15) } }
 

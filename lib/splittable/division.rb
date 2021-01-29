@@ -2,7 +2,7 @@
 
 class Splittable::Division
   def initialize(value:, quantity:)
-    @value = BigDecimal(value.truncate(2), 15)
+    @value = BigDecimal(value, 15).truncate(2)
     @quantity = BigDecimal(quantity.to_i, 15)
 
     check_quantity_as_positive_value!
@@ -12,6 +12,7 @@ class Splittable::Division
     partial_value = (value / quantity).truncate(2)
     installments = [partial_value] * quantity
     installments[0] += value - installments.sum.to_d
+
     installments
   end
 
