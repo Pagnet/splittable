@@ -19,7 +19,7 @@ jobs:
 
     - name: Set up Ruby version specified in `.ruby-version`
       with:
-          ruby-version: ${{ matrix.ruby }}
+        ruby-version: ${{ matrix.ruby }}
       uses: eregon/use-ruby-action@master
 
     - name: Install dependencies
