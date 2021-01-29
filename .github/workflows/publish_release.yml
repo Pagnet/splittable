@@ -13,6 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Install bundle
+        run: |
+          gem install bundler
+          bundle update --bundler
+
       - name: Release Gem
         if: contains(github.ref, 'refs/tags/v')
         uses: cadwallion/publish-rubygems-action@master
