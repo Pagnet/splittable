@@ -1,7 +1,7 @@
 ## splittable 0.0.3 (Jan 29, 2021)
 
-* Separete Division code
-* Separete Normalize code
+* Separate Division code
+* Separate Normalize code
 * Update actions to use ruby versions 2.5, 2.6 and 3.0
 * Add badge to README.md
 * Updated some gems versions
