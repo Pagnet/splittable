@@ -2,10 +2,9 @@
 
 source 'https://rubygems.org'
 
-ruby '2.6.6'
-
 gemspec
 
+gem 'bigdecimal', '~> 3.0'
 gem 'pry-byebug', '~> 3.9'
 gem 'rake', '~> 13.0.3'
 gem 'rspec', '~> 3.10'
