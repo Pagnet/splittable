@@ -12,7 +12,7 @@ class Splittable::Division
     partial_value = (value / quantity).truncate(2)
 
     installments = [partial_value] * quantity
-    installments[0] += value - installments.sum
+    installments[0] += value - installments.sum.to_d
     installments
   end
 
