@@ -10,7 +10,7 @@ module Splittable
     def division(value:, quantity:)
       convert_params!(value: value, quantity: quantity)
       params_validation!(@quantity)
-      partial_value = (@value / @quantity).truncate(2)
+      partial_value = (@value / @quantity).to_d.truncate(2)
       decimal_difference = @value - (@quantity * partial_value)
       installments = [partial_value] * @quantity
       installments[0] += decimal_difference
@@ -39,7 +39,7 @@ module Splittable
     end
 
     def convert_params!(value: nil, quantity: nil, installments: nil)
-      @value = BigDecimal(value.truncate(2), 15) unless value.nil?
+      @value = BigDecimal(value.to_d.truncate(2), 15) unless value.nil?
       @quantity = BigDecimal(quantity.to_i, 15) unless quantity.nil?
       @installments = installments.map { |installment| BigDecimal(installment.round(2), 15) } unless installments.nil?
     end
