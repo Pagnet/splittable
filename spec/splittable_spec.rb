@@ -21,7 +21,7 @@ RSpec.describe Splittable do
       context "when input is #{example[:input]}" do
         let(:value) { example[:input].first.to_d }
         let(:quantity) { example[:input].last }
-        let(:expected_result) { example[:result].map {|r| BigDecimal(r, 15)} }
+        let(:expected_result) { example[:result].map { |r| BigDecimal(r, 15) } }
 
         it { expect(division).to eq expected_result }
         it { expect(division.map(&:class).uniq).to eq [BigDecimal] }

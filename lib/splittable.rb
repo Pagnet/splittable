@@ -9,7 +9,7 @@ module Splittable
     # receive total value and to quantity installments are required to equal division
     # just the first installment will receive the difference cents
     def division(value:, quantity:)
-      Splittable::Division.new(value: value, quantity:quantity).call
+      Splittable::Division.new(value: value, quantity: quantity).call
     end
 
     # receive total value and specific value of installments are required to specific division
