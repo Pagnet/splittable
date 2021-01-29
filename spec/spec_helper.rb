@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'splittable'
 require 'pry'
 require 'simplecov'
+
+require 'splittable'
 
 SimpleCov.start
 

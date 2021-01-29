@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require 'splittable'
 
 RSpec.describe Splittable do
   describe '.division' do
@@ -15,12 +16,12 @@ RSpec.describe Splittable do
       { input: [0.07, 5],    result: [0.03, 0.01, 0.01, 0.01, 0.01] },
       { input: [100, 12],    result: [8.37, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33, 8.33] },
       { input: [10, 2],      result: [5, 5] },
-      { input: [-1, 5],      result: [-0.2e0, -0.2e0, -0.2e0, -0.2e0, -0.2e0] }
+      { input: [294.03, 6],  result: [49.03, 49, 49, 49, 49, 49] }
     ].each do |example|
       context "when input is #{example[:input]}" do
         let(:value) { example[:input].first.to_d }
         let(:quantity) { example[:input].last }
-        let(:expected_result) { example[:result].map(&:to_d) }
+        let(:expected_result) { example[:result].map {|r| BigDecimal(r, 15)} }
 
         it { expect(division).to eq expected_result }
         it { expect(division.map(&:class).uniq).to eq [BigDecimal] }
