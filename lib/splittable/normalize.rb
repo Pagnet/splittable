@@ -7,9 +7,14 @@ class Splittable::Normalize
   end
 
   def call
-    decimal_difference = @value - @installments.sum
-    @installments[0] += decimal_difference
+    decimal_difference = value - installments.sum
+    installments[0] += decimal_difference
 
-    @installments
+    installments
   end
+
+  private
+
+  attr_reader :value
+  attr_accessor :installments
 end
