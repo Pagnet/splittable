@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Splittable::Division
-  def initialize(value:, quantity:, precision:)
+  def initialize(value:, quantity:, precision: 2)
     @precision = precision
     @value = BigDecimal(value, 15).truncate(precision)
     @quantity = BigDecimal(quantity.to_i, 15)
