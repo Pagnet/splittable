@@ -1,15 +1,16 @@
 # frozen_string_literal: true
 
 class Splittable::Division
-  def initialize(value:, quantity:)
-    @value = BigDecimal(value, 15).truncate(2)
+  def initialize(value:, quantity:, precision: 2)
+    @precision = precision
+    @value = BigDecimal(value, 15).truncate(precision)
     @quantity = BigDecimal(quantity.to_i, 15)
 
     check_quantity_as_positive_value!
   end
 
   def call
-    partial_value = (value / quantity).truncate(2)
+    partial_value = (value / quantity).truncate(precision)
     installments = [partial_value] * quantity
     installments[0] += value - installments.sum.to_d
 
@@ -18,7 +19,7 @@ class Splittable::Division
 
   private
 
-  attr_reader :value, :quantity
+  attr_reader :value, :quantity, :precision
 
   def check_quantity_as_positive_value!
     return if quantity.positive?

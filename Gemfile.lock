@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    splittable (0.0.4)
+    splittable (0.0.5)
 
 GEM
   remote: https://rubygems.org/

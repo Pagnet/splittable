@@ -1,3 +1,9 @@
+## splittable 0.0.5 (Feb 02, 2021)
+
+* Add precision parameter to division and normilize methods
+
+  *Ítalo Matos*
+
 ## splittable 0.0.4 (Jan 29, 2021)
 
 * Fix publish_release job

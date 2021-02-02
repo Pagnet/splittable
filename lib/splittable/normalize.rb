@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Splittable::Normalize
-  def initialize(value:, installments:)
-    @value = BigDecimal(value, 15).truncate(2)
-    @installments = installments.map { |installment| BigDecimal(installment.round(2), 15) }
+  def initialize(value:, installments:, precision: 2)
+    @value = BigDecimal(value, 15).truncate(precision)
+    @installments = installments.map { |installment| BigDecimal(installment.round(precision), 15) }
   end
 
   def call
