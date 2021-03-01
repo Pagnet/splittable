@@ -36,13 +36,13 @@ Result: the total truncated value was divided by the number of plots informed an
 ```ruby
 => [0.5e-1, 0.3e-1, 0.3e-1] # => [0.05, 0.03, 0.03]
 ```
-Default precision is 2 decimal places, but, you can customize this with precision parameter: 
+Default precision is 2 decimal places, but, you can customize this with precision parameter:
 
 ``` ruby
 Splittable.division(value: 10, quantity: 3, precision: 3)
 ```
 
-Result: 
+Result:
 ```ruby
 => [0.3334e1, 0.3333e1, 0.3333e1] # => [0.334, 0.333, 0.333]
 ```
@@ -60,12 +60,12 @@ Result: all values are truncated and them the difference is attributed in the fi
 => [0.3524e2, 0.2143e2, 0.4333e2] # => [35.24, 21.43, 43.33]
 ```
 
-In this method, you have the same optional precision parameter: 
+In this method, you have the same optional precision parameter:
 ```ruby
 Splittable.normalize(value: 100, installments: [33.33333333, 33.33333333, 33.33333333], precision: 3)
 ```
 
-Result: 
+Result:
 ```ruby
 => [0.33334e2, 0.33333e2, 0.33333e2] # => [33.334, 33.333, 33.333]
 ```
@@ -74,11 +74,11 @@ Result:
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rspec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. 
-
-To install this gem from rubygems, run `gem install splittable`.
+To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## To Release
+
+Fill the `CHANGELOG.md` with relevants update.
 
 To automatic release a new version, update the version number in `lib/splittable/version.rb` and merge it to `master` branch.
 
