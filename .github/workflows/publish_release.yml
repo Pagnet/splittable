@@ -6,17 +6,20 @@ on:
       - master
     tags:
       - v*
+
 jobs:
-  build:
+  publish:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Release Gem
-        if: contains(github.ref, 'refs/tags/v')
-        uses: cadwallion/publish-rubygems-action@master
+        uses: marcelotoledo5000/publish-rubygems-action@master
         env:
           GITHUB_TOKEN: ${{secrets.BUNDLE_GITHUB__COM}}
           RUBYGEMS_API_KEY: ${{secrets.RUBYGEMS_RELEASE}}
+          GIT_EMAIL: automated_release@useblu.com.br
+          GIT_NAME: 'Automated Release'
           RELEASE_COMMAND: bundle exec rake release
